@@ -15,7 +15,6 @@ const Login = () => {
         e.preventDefault();
         try {
             const response = await axios.post(`${API_URL}/login`, { email, password }, { withCredentials: true });
-            console.log("Login exitoso:", response.data);
             navigate("/tareas");
         } catch (err) {
             setError("Error al iniciar sesión");

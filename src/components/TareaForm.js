@@ -46,7 +46,6 @@ const TareaForm = ({ onTareaAdded }) => {
     
         try {
             const nuevaTarea = await tareaService.createTarea(tareaData);
-            console.log(nuevaTarea);
             onTareaAdded(nuevaTarea);
             alert('Tarea creada con éxito');
 

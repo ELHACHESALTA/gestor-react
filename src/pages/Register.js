@@ -16,7 +16,6 @@ const Register = () => {
         e.preventDefault();
         try {
             const response = await axios.post(`${API_URL}/register`, { name, email, password });
-            console.log("Registro exitoso:", response.data);
             navigate("/tareas");
         } catch (err) {
             setError("Error al registrarse");
